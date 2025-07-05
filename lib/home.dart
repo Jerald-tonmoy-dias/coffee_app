@@ -1,4 +1,5 @@
 import 'package:coffe_card/coffee_prefer.dart';
+import 'package:coffe_card/styled_body_text.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -18,12 +19,22 @@ class Home extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(20),
             color: Colors.brown[200],
-            child: Text('Sandbox body'),
+            child: StyledBodyText('How I like my coffee!'),
           ),
           Container(
             padding: EdgeInsets.all(20),
             color: Colors.brown[100],
             child: const CoffeePrefer(),
+          ),
+          Expanded(
+            child: Image.asset(
+              'assets/img/coffee_bg.jpg',
+              fit: BoxFit.fitWidth,
+              alignment: Alignment.bottomCenter,
+              // width: 25,
+              // color: Colors.brown[100],
+              // colorBlendMode: BlendMode.multiply,
+            ),
           ),
         ],
       ),
